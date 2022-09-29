@@ -1,0 +1,20 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    tags: ["powertop", "consumer"]
+    paths:
+      - /root/logs/powertop/powertop-consumers*.csv
+  - type: log
+    enabled: true
+    tags: ["powertop", "device"]
+    paths:
+      - /root/logs/powertop/powertop-devices*.csv
+  - type: log
+    enabled: true
+    tags: ["nvidia-smi"]
+    paths:
+      - /root/logs/nvidia-smi/nvidia-out-*.csv
+
+output:
+  logstash:
+    hosts: ["logstash:5044"]
