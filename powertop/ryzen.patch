@@ -1,0 +1,13 @@
+diff --git a/src/cpu/cpu.cpp b/src/cpu/cpu.cpp
+index a92f111..df79e9a 100644
+--- a/src/cpu/cpu.cpp
++++ b/src/cpu/cpu.cpp
+@@ -552,6 +541,8 @@ void report_display_cpu_cstates(void)
+ 					buffer[0] = 0;
+ 					buffer2[0] = 0;
+
++					if(idx2 >= core_tbl_size.cols * core_tbl_size.rows) break;
++
+ 					if (line == LEVEL_HEADER) {
+ 						/* Here we need to check for which core type we
+ 						* are using. Do not use the core type for the

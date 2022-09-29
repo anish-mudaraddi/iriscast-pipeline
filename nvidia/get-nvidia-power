@@ -1,0 +1,3 @@
+nvidia-smi \
+--query-gpu=index,name,uuid,power.draw,power.limit,enforced.power.limit,power.min_limit,power.max_limit,memory.total,memory.reserved,memory.used,memory.free,fan.speed,pstate,utilization.gpu,utilization.memory,temperature.gpu,temperature.memory,fan.speed \
+--format=csv,nounits --filename=/home/anish/workspace/iriscast/nvidia/data/nvidia-out-$(date +%T).csv
