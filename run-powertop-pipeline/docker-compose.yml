@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+
+  powertop:
+    image: powertop-csv:latest
+    container_name: powertop
+    privileged: true
+    build:
+      context: powertop
+      dockerfile: Dockerfile
+    volumes:
+      - ../powertop/data/:/root/data/
+
+  logstash:
+    image: opensearchproject/logstash-oss-with-opensearch-output-plugin:7.16.2
+    container_name: logstash
+    hostname: logstash
+    user: root
+    ports:
+      - "5044:5044"
+    expose:
+      - "5044"
+    volumes:
+      - ../logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro
+      - ../logstash/logstash.yaml:/usr/share/logstash/config/logstash.yml:ro
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.16.2
+    container_name: filebeat
+    user: root
+    depends_on:
+      - logstash
+    volumes:
+      - ../powertop/data/:/root/logs/powertop/
+      - ../filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ../nvidia/data/:/root/logs/nvidia-smi/
+      - /home/vgc59244/csvs_to_output/:/root/logs/external_csvs/

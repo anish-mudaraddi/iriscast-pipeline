@@ -1,0 +1,101 @@
+Usage;Wakeups/s;GPU ops/s;Disk IO/s;GFX Wakeups/s;Category;Description;PW Estimate
+  1.1 ms/s; 34.5;;;;Timer;tick_sched_timer;  138 mW  
+  9.3 ms/s;  9.5;;;;Process;[PID 1793240] C1 CompilerThre; 51.9 mW  
+ 25.3 ms/s;  2.5;;;;Process;[PID 1793277] C2 CompilerThre; 49.3 mW  
+ 20.6 ms/s;  2.6;;;;Process;[PID 1793187] java; 42.3 mW  
+ 19.5 ms/s;  2.4;;;;Process;[PID 1793239] C2 CompilerThre; 39.8 mW  
+ 19.0 ms/s;  2.1;;;  0.0;Process;[PID 1793300] C2 CompilerThre; 37.9 mW  
+108.5 us/s;  4.5;;;;Process;[PID 47060] IPC I/O Parent; 17.9 mW  
+371.4 us/s;  3.9;;;;Timer;hrtimer_wakeup; 16.1 mW  
+ 56.9 us/s;  3.6;;;;Process;[PID 48067] AudioIP~ent RPC; 14.3 mW  
+ 89.9 us/s;  3.5;;;;Process;[PID 47356] IPC I/O Child; 14.0 mW  
+  4.0 ms/s;  1.8;;;;Process;[PID 47329] Isolated Web Co; 13.2 mW  
+542.3 us/s;  3.1;;;;Interrupt;[7] sched(softirq); 13.1 mW  
+ 67.8 us/s;  2.8;;;;Process;[PID 47082] glean.dispatche; 11.2 mW  
+ 70.8 us/s;  2.8;;;;Process;[PID 1784693] ThreadPoolServi; 11.0 mW  
+101.7 us/s;  2.6;;;;Process;[PID 47109] Compositor; 10.3 mW  
+ 86.1 us/s;  2.6;;;;Process;[PID 1541885] MediaDe~hine #5; 10.2 mW  
+ 27.0 us/s;  1.9;;;;Process;[PID 47370] Timer; 7.61 mW  
+ 46.9 us/s;  1.8;;;;Process;[PID 47064] IPDL Background; 7.13 mW  
+ 20.5 us/s;  1.5;;;;Process;[PID 1541902] MediaTimer #6; 5.81 mW  
+  2.3 ms/s;  0.5;;;;Process;[PID 1793198] CMS Main Thread; 5.74 mW  
+ 28.1 us/s;  1.4;;;;Process;[PID 1549162] MediaSu~sor #22; 5.71 mW  
+ 26.5 us/s;  1.4;;;;Process;[PID 1541900] MediaSu~sor #20; 5.62 mW  
+286.9 us/s;  1.2;;;;kWork;hci_tx_work; 5.21 mW  
+ 57.6 us/s;  1.3;;;;Process;[PID 47371] RemVidChild; 5.12 mW  
+ 36.5 us/s;  1.3;;;;Process;[PID 47182] AudioIP~ver RPC; 5.08 mW  
+102.5 us/s;  1.2;;;;kWork;hci_rx_work; 4.97 mW  
+ 55.0 us/s;  1.2;;;  0.0;Process;[PID 1784874] ThreadPoolSingl; 4.87 mW  
+ 27.5 us/s;  1.2;;;;Process;[PID 1541886] MediaSu~sor #19; 4.83 mW  
+ 17.5 us/s;  1.1;;;;Process;[PID 1541887] MediaPD~der #14; 4.33 mW  
+199.9 us/s;  1.0;;;;Interrupt;[0] HI_SOFTIRQ; 4.26 mW  
+ 27.0 us/s;  1.1;;;;Process;[PID 1546822] MediaSu~sor #21; 4.25 mW  
+ 15.9 us/s;  1.0;;;;Process;[PID 1541890] MediaPD~der #15; 3.99 mW  
+ 40.9 us/s;  1.0;;;;Process;[PID 47384] ImageBridgeChld; 3.99 mW  
+175.7 us/s;  0.9;;;;Process;[PID 47823] WRRende~ckend#3; 3.93 mW  
+ 17.1 us/s;  1.0;;;;Process;[PID 1542037] MediaPD~der #16; 3.82 mW  
+  0.9 ms/s;  0.6;;;;Process;[PID 511] Xorg; 3.74 mW  
+ 38.7 us/s;  0.9;;;;Process;[PID 47094] Softwar~cThread; 3.59 mW  
+ 97.1 us/s;  0.8;;;;Process;[PID 50177] bluetooth; 3.48 mW  
+ 46.3 us/s;  0.8;;;;Process;[PID 624] pulseaudio; 3.25 mW  
+ 69.7 us/s;  0.7;;;;Process;[PID 641] dbus-daemon; 3.02 mW  
+ 29.6 us/s;  0.7;;;;Interrupt;[6] tasklet(softirq); 2.96 mW  
+221.1 us/s;  0.6;;;;Process;[PID 47096] Renderer; 2.77 mW  
+132.6 us/s;  0.6;;;  0.0;Process;[PID 47056] firefox; 2.70 mW  
+  9.0 us/s;  0.7;;;;Process;[PID 362164] polybar; 2.66 mW  
+  4.3 us/s;  0.6;;;;Process;[PID 16] rcu_preempt; 2.34 mW  
+ 33.3 us/s;  0.6;;;;Process;[PID 48068] threaded-ml; 2.32 mW  
+ 65.6 us/s;  0.5;;;;Process;[PID 475] dbus-daemon; 2.22 mW  
+287.3 us/s;  0.4;;;;Process;[PID 1793213] VM Thread; 2.19 mW  
+ 77.3 us/s;  0.5;;;;kWork;free_work; 2.13 mW  
+ 10.5 us/s;  0.5;;;;Process;[PID 362173] polybar; 2.07 mW  
+ 25.2 us/s;  0.5;;;;Process;[PID 47896] IPC I/O Child; 2.02 mW  
+ 31.9 us/s;  0.5;;;;Process;[PID 47821] WRScene~ilder#3; 1.99 mW  
+  8.7 us/s;  0.5;;;;Process;[PID 362172] polybar; 1.98 mW  
+  8.4 us/s;  0.5;;;;Process;[PID 47228] IPC I/O Child; 1.98 mW  
+395.6 us/s;  0.3;;;  0.0;Process;[PID 43569] gnome-terminal-; 1.95 mW  
+ 83.3 us/s;  0.5;;;;kWork;psi_avgs_work; 1.94 mW  
+ 19.3 us/s;  0.5;;;;Process;[PID 1783256] MediaSu~sor #10; 1.93 mW  
+ 21.7 us/s;  0.5;;;;Process;[PID 48016] IPC I/O Child; 1.86 mW  
+486.2 us/s; 0.26;;;;Process;[PID 1793371] GC Thread#4; 1.79 mW  
+ 23.6 us/s;  0.4;;;;Process;[PID 1782783] MediaPD~oder #2; 1.78 mW  
+ 13.2 us/s;  0.4;;;;Process;[PID 43464] kworker/u65:2; 1.76 mW  
+488.0 us/s; 0.25;;;;Process;[PID 1793372] GC Thread#5; 1.73 mW  
+602.1 us/s; 0.20;;;;Process;[PID 1679696] Isolated Web Co; 1.71 mW  
+  5.3 us/s;  0.4;;;;Process;[PID 1679704] Timer; 1.64 mW  
+  7.6 us/s;  0.4;;;;Process;[PID 362160] polybar; 1.62 mW  
+ 70.5 us/s;  0.4;;;;Process;[PID 1782779] MediaPD~oder #1; 1.57 mW  
+441.4 us/s; 0.22;;;;Process;[PID 1782782] MediaPD~oder #1; 1.55 mW  
+  1.7 us/s;  0.4;;;  0.0;Process;[PID 441753] xcape; 1.46 mW  
+383.6 us/s; 0.22;;;;Process;[PID 1793194] GC Thread#0; 1.46 mW  
+341.6 us/s; 0.22;;;;Process;[PID 1793368] GC Thread#1; 1.42 mW  
+402.1 us/s; 0.20;;;;Process;[PID 1793369] GC Thread#2; 1.40 mW  
+283.6 us/s; 0.23;;;;Process;[PID 1793376] GC Thread#9; 1.37 mW  
+  0.9 ms/s;;;;;kWork;ieee80211_scan_work; 1.36 mW  
+347.5 us/s; 0.18;;;;Process;[PID 1793373] GC Thread#6; 1.27 mW  
+ 20.9 us/s;  0.3;;;;Process;[PID 1782780] MediaPD~oder #1; 1.27 mW  
+400.6 us/s; 0.16;;;;Process;[PID 1793374] GC Thread#7; 1.24 mW  
+337.3 us/s; 0.18;;;;Process;[PID 1782781] MediaPD~oder #1; 1.23 mW  
+  1.5 us/s; 0.30;;;;kWork;console_callback; 1.17 mW  
+ 16.4 us/s; 0.28;;;;Process;[PID 1541889] MediaSu~isor #9; 1.13 mW  
+198.4 us/s; 0.20;;;;Process;[PID 1793241] Sweeper thread; 1.08 mW  
+595.6 us/s; 0.03;;;;kWork;wb_workfn; 1.04 mW  
+  0.5 us/s; 0.26;;;;Process;[PID 1793647] docker-compose; 1.04 mW  
+ 16.0 us/s; 0.25;;;;Process;[PID 1541888] MediaSu~sor #20; 1.02 mW  
+ 82.1 us/s; 0.21;;;;Process;[PID 47224] WebExtensions;  966 uW  
+589.6 us/s;;;;;kWork;fqdir_free_fn;  920 uW  
+135.0 us/s; 0.18;;;;Process;[PID 1784689] Discord;  916 uW  
+  1.5 us/s; 0.22;;;  0.0;Process;[PID 1789424] kworker/4:0;  879 uW  
+  4.1 us/s; 0.22;;;;Process;[PID 1679700] IPC I/O Child;  866 uW  
+346.0 us/s; 0.07;;;;Process;[PID 1793370] GC Thread#3;  826 uW  
+446.1 us/s; 0.03;;;;Interrupt;[66] nvidia;  806 uW  
+301.8 us/s; 0.08;;;;Process;[PID 1793375] GC Thread#8;  802 uW  
+  0.8 us/s; 0.20;;;;Process;[PID 65647] dockerd;  773 uW  
+ 12.6 us/s; 0.19;;;;Process;[PID 1547690] MediaSu~sor #21;  769 uW  
+149.4 us/s; 0.13;;;;Interrupt;[3] net_rx(softirq);  762 uW  
+ 24.1 us/s; 0.18;;;;Process;[PID 47063] Socket Thread;  743 uW  
+  1.3 us/s; 0.18;;;;Process;[PID 65662] containerd;  708 uW  
+435.6 us/s; 0.01;;;;Interrupt;[9] RCU(softirq);  702 uW  
+  8.0 us/s; 0.17;;;;kWork;toggle_allocation_gate;  696 uW  
+  3.7 us/s; 0.17;;;;Process;[PID 1784716] Voice;  689 uW  
+  9.1 us/s; 0.17;;;;Process;[PID 1793259] Common-Cleaner;  676 uW  
