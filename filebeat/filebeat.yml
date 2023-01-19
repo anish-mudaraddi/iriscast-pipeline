@@ -1,20 +1,198 @@
-filebeat.inputs:
-  - type: log
-    enabled: true
-    tags: ["powertop", "consumer"]
+filebeat:
+ inputs:
+  - enabled: false
+    fields:
+      service: cambridge-compute
     paths:
-      - /root/logs/powertop/powertop-consumers*.csv
-  - type: log
-    enabled: true
-    tags: ["powertop", "device"]
+    - /root/logs/cambridge/nodes/*.csv 
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: cloud-pdus
     paths:
-      - /root/logs/powertop/powertop-devices*.csv
-  - type: log
-    enabled: true
-    tags: ["nvidia-smi"]
+    - /root/logs/cloud/cloud-pdus*.csv 
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: cloud-compute
     paths:
-      - /root/logs/nvidia-smi/nvidia-out-*.csv
-
+    - /root/logs/cloud/cloud-compute*.csv
+    - /root/logs/cloud/cloud-openstack-manual-checks.csv
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: cloud-storage
+    paths:
+    - /root/logs/cloud/cloud-storage.csv
+    - /root/logs/cloud/cloud-storage-manual-checks.csv
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: ic-compute
+    fields_under_root: true
+    paths:
+    - /root/logs/ic_t2/ic-compute.csv
+    type: log
+  - enabled: false
+    fields:
+      service: scarf-compute
+    fields_under_root: true
+    paths:
+    - /root/logs/scarf/scarf-compute-*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: scarf-pdus
+    fields_under_root: true
+    paths:
+    - /root/logs/scarf/scarf-pdus-*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: scarf-devices
+    fields_under_root: true
+    paths:
+    - /root/logs/scarf/scarf-device-normal-*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: scarf-slurm
+    fields_under_root: true
+    paths:
+    - /root/logs/scarf/slurm/scarf-slurm.csv
+    type: log
+  - enabled: false
+    fields:
+      service: scarf-slurm-steps
+    fields_under_root: true
+    paths:
+    - /root/logs/scarf/slurm/scarf-slurm-steps.csv
+    type: log
+  - enabled: false
+    fields:
+      service: scarf-jobs
+    fields_under_root: true
+    paths:
+    - /root/logs/scarf/job/*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: scarf-devices-other
+    fields_under_root: true
+    paths:
+    - /root/logs/scarf/scarf-device-other-*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: durham-pdus-cosma8
+    fields_under_root: true
+    paths:
+    - /root/logs/durham/durham-cosma8-pdus.csv
+    type: log
+  - enabled: false
+    fields:
+      service: durham-pdus-cosma7
+    fields_under_root: true
+    paths:
+    - /root/logs/durham/durham-cosma7-pdus*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: durham-pdus-storage
+    fields_under_root: true
+    paths:
+    - /root/logs/durham/durham-lustre-storage-pdus.csv
+    type: log
+  - enabled: false
+    fields:
+      service: durham-compute-cosma7
+    paths:
+    - /root/logs/durham/efiles/m7*.txt
+    fields_under_root: true 
+  - enabled: false
+    fields:
+      service: durham-compute-cosma8
+    paths:
+    - /root/logs/durham/efiles/m8*.txt
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: durham-slurm-energy
+    paths:
+    - /root/logs/durham/durham-slurm-energy.csv
+    fields_under_root: true 
+    type: log
+  - enabled: false
+    fields:
+      service: durham-slurm-energy-notimestamp
+    paths:
+    - /root/logs/durham/durham-slurm-energy-notimestamp.csv
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: durham-slurm
+    paths:
+    - /root/logs/durham/durham-slurm-alloc.csv
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: durham-slurm-steps
+    paths:
+    - /root/logs/durham/durham-slurm-steps.csv
+    fields_under_root: true
+    type: log
+  - enabled: false
+    fields:
+      service: durham-jobs
+    paths:
+    - /root/logs/durham/job/*.csv
+    fields_under_root: true 
+    type: log
+  - enabled: false
+    fields:
+      service: qmul-racks  
+    fields_under_root: true
+    paths:
+    - /root/logs/qmul/rack*power.csv
+    type: log
+  - enabled: false
+    fields:
+      service: qmul-compute-turbostat
+    fields_under_root: true
+    paths:
+    - /root/logs/qmul/compute-turbostat/*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: qmul-compute-ipmi
+    fields_under_root: true 
+    paths:
+    - /root/logs/qmul/compute-ipmi/*.csv
+    type: log
+  - enabled: false
+    fields:
+      service: qmul-slurm
+    fields_under_root: true
+    paths:
+    - /root/logs/qmul/slurm/sacct-*-alloc.log
+    type: log 
+  - enabled: false
+    fields:
+      service: qmul-jobs
+    fields_under_root: true
+    paths:
+    - /root/logs/qmul/job/*.csv
+    type: log
+processors:
+  - drop_fields:
+      fields: ["agent.ephemeral_id", "agent.hostname", "agent.id", "agent.type", "agent.version", "ecs.version", "input.type", "log.offset", "version"]
 output:
   logstash:
     hosts: ["logstash:5044"]

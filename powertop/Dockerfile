@@ -3,9 +3,6 @@ USER root
 
 WORKDIR /root
 
-COPY ryzen.patch .
-COPY run_powertop.sh .
-
 ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
@@ -21,6 +18,8 @@ RUN echo "===> INSTALLING DEPENDENCIES" && \
 RUN echo "===> CLONE POWERTOP" && \
   git clone https://github.com/fenrus75/powertop.git --branch v2.13
 
+COPY ryzen.patch .
+
 WORKDIR /root/powertop
 RUN echo "===> BUILD POWERTOP" && \
   patch -p1 < ../ryzen.patch && \
@@ -30,7 +29,9 @@ RUN echo "===> BUILD POWERTOP" && \
   ln -s /root/powertop/src/powertop /usr/bin/powertop && \
   chmod +x /usr/bin/powertop
 
+
 WORKDIR /root
+COPY run_powertop.sh .
 RUN mkdir /root/data && \
   chmod +x run_powertop.sh
 
