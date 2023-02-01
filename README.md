@@ -25,3 +25,7 @@ change the docker-compose script to point to directories with correct csv files
 cd ~/<repo>
 docker-compose up
 ```
+
+# Scripts to parse external info
+see `iriscast-read-data` folder for scripts used to parse information into csv files so that they could be uploaded to OpenSearch
+
